@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon May  5 18:47:12 2025
+# Process ID: 38488
+# Current directory: /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.runs/impl_1
+# Command line: vivado -log main.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source main.tcl -notrace
+# Log file: /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.runs/impl_1/main.vdi
+# Journal file: /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source main.tcl -notrace

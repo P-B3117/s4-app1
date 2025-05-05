@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Apr 30 19:04:07 2025
+# Process ID: 35214
+# Current directory: /home/charles/Documents/git/uni-app/s4-app1/pb_app_log_comb/pb_APP_log_comb.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/charles/Documents/git/uni-app/s4-app1/pb_app_log_comb/pb_APP_log_comb.sim/sim_1/behav/xsim/xsim.dir/Top_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/charles/Documents/git/uni-app/s4-app1/pb_app_log_comb/pb_APP_log_comb.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/charles/Documents/git/uni-app/s4-app1/pb_app_log_comb/pb_APP_log_comb.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/charles/Documents/git/uni-app/s4-app1/pb_app_log_comb/pb_APP_log_comb.sim/sim_1/behav/xsim/xsim.dir/Top_tb_behav/webtalk/xsim_webtalk.tcl -notrace

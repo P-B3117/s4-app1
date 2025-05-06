@@ -9,31 +9,19 @@ ENTITY thermo2bin IS
     );
 END thermo2bin;
 
--- thermo 11 11 11 11 11 11
--- s0     10 10 10 10 10 10
--- s1      100   100   100
--- s2        1000
--- bin       1100
-
 ARCHITECTURE Behavioral OF thermo2bin IS
-    signal a0_temp : std_logic_vector(3 downto 0);
-    signal b0_temp : std_logic_vector(3 downto 0);
-    signal a1_temp : std_logic_vector(3 downto 0);
-    signal b1_temp : std_logic_vector(3 downto 0);
-    signal a2_temp : std_logic_vector(3 downto 0);
-    signal b2_temp : std_logic_vector(3 downto 0);
-
-    SIGNAL s0 : STD_LOGIC_VECTOR(11 DOWNTO 0);
-    SIGNAL s1 : STD_LOGIC_VECTOR(11 DOWNTO 0);
+    SIGNAL s0 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+    SIGNAL s1 : STD_LOGIC_VECTOR(3 DOWNTO 0);
     SIGNAL s2 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+    SIGNAL s3 : STD_LOGIC_VECTOR(3 DOWNTO 0);
 
-    COMPONENT full_adder IS
+    SIGNAL b0 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+    SIGNAL b1 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+
+    COMPONENT thermo2bin_mini IS
         PORT (
-            a : IN STD_LOGIC;
-            b : IN STD_LOGIC;
-            cin : IN STD_LOGIC;
-            s : OUT STD_LOGIC;
-            cout : OUT STD_LOGIC
+            thermo : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+            bin : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
         );
     END COMPONENT;
 
@@ -48,106 +36,51 @@ ARCHITECTURE Behavioral OF thermo2bin IS
     END COMPONENT;
 
 BEGIN
-    -- S0
-    adder_0_1 : full_adder
+    mini0 : thermo2bin_mini
     PORT MAP(
-        a => thermo(0),
-        b => thermo(1),
-        cin => '0',
-        s => s0(0),
-        cout => s0(1)
+        thermo => thermo(2 DOWNTO 0),
+        bin => s0,
     );
 
-    adder_2_3 : full_adder
+    mini1 : thermo2bin_mini
     PORT MAP(
-        a => thermo(2),
-        b => thermo(3),
-        cin => '0',
-        s => s0(2),
-        cout => s0(3)
+        thermo => thermo(5 DOWNTO 3),
+        bin => s1,
     );
 
-    adder_4_5 : full_adder
+    mini2 : thermo2bin_mini
     PORT MAP(
-        a => thermo(4),
-        b => thermo(5),
-        cin => '0',
-        s => s0(4),
-        cout => s0(5)
+        thermo => thermo(8 DOWNTO 6),
+        bin => s2,
     );
 
-    adder_6_7 : full_adder
+    mini3 : thermo2bin_mini
     PORT MAP(
-        a => thermo(6),
-        b => thermo(7),
-        cin => '0',
-        s => s0(6),
-        cout => s0(7)
+        thermo => thermo(11 DOWNTO 9),
+        bin => s3,
     );
 
-    adder_8_9 : full_adder
+    first_adder : full_adder_4bit
     PORT MAP(
-        a => thermo(8),
-        b => thermo(9),
+        a => s0,
+        b => s1,
         cin => '0',
-        s => s0(8),
-        cout => s0(9)
+        s => b0
     );
 
-    adder_10_11 : full_adder
+    second_adder : full_adder_4bit
     PORT MAP(
-        a => thermo(10),
-        b => thermo(11),
+        a => s2,
+        b => s3,
         cin => '0',
-        s => s0(10),
-        cout => s0(11)
-    );
-
-    -- S1
-    a0_temp <= "00" & s0(1 DOWNTO 0); 
-    b0_temp <= "00" & s0(3 DOWNTO 2); 
-    adder_10_32 : full_adder_4bit
-    PORT MAP(
-        a => a0_temp,
-        b => b0_temp,
-        cin => '0',
-        s => s1(3 DOWNTO 0)
-    );
-
-    a1_temp <= "00" & s0(5 DOWNTO 4); 
-    b1_temp <= "00" & s0(7 DOWNTO 6); 
-    adder_54_76 : full_adder_4bit
-    PORT MAP(
-        a => a1_temp,
-        b => b1_temp,
-        cin => '0',
-        s => s1(7 DOWNTO 4)
-    );
-
-    a2_temp <= "00" & s0(9 DOWNTO 8); 
-    b2_temp <= "00" & s0(11 DOWNTO 10); 
-    adder_98_1110 : full_adder_4bit
-    PORT MAP(
-        a => a2_temp,
-        b => b2_temp,
-        cin => '0',
-        s => s1(11 DOWNTO 8)
-    );
-
-    -- S2
-    adder_3210_7654 : full_adder_4bit
-    PORT MAP(
-        a => s1(3 DOWNTO 0),
-        b => s1(7 DOWNTO 4),
-        cin => '0',
-        s => s2
+        s => b1
     );
 
     -- BIN
-    adder_81 : full_adder_4bit
+    bin_adder : full_adder_4bit
     PORT MAP(
-        a => s1(11 DOWNTO 8),
-        b => s2,
+        a => b0,
+        b => b1,
         cin => '0',
         s => bin
     );

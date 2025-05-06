@@ -1,48 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1746499927">
-  <File Type="VDS-TIMING-PB" Name="main_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="main_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="main.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="main_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="main_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="main_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="main.vds"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1746565236">
   <File Type="REPORTS-TCL" Name="main_reports.tcl"/>
   <File Type="PA-TCL" Name="main.tcl"/>
+  <File Type="RDS-DCP" Name="main.dcp"/>
+  <File Type="RDS-RDS" Name="main.vds"/>
+  <File Type="RDS-UTIL" Name="main_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="main_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/imports/src/septSegments_encodeur.vhd">
-      <FileInfo SFType="VHDL2008">
-        <Attr Name="ImportPath" Val="$PPRDIR/../src/septSegments_encodeur.vhd"/>
-        <Attr Name="ImportTime" Val="1635539909"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/src/septSegments_refreshPmod.vhd">
-      <FileInfo SFType="VHDL2008">
-        <Attr Name="ImportPath" Val="$PPRDIR/../src/septSegments_refreshPmod.vhd"/>
-        <Attr Name="ImportTime" Val="1651164618"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/src/septSegments_Top.vhd">
-      <FileInfo SFType="VHDL2008">
-        <Attr Name="ImportPath" Val="$PPRDIR/../src/septSegments_Top.vhd"/>
-        <Attr Name="ImportTime" Val="1651164797"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/src/synchro_module_v2.vhd">
-      <FileInfo SFType="VHDL2008">
-        <Attr Name="ImportPath" Val="$PPRDIR/../src/synchro_module_v2.vhd"/>
-        <Attr Name="ImportTime" Val="1635539909"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/VHDL/thermo2bin/thermo2bin.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../VHDL/thermo2bin/thermo2bin.vhd"/>

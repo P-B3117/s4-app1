@@ -1,6 +1,6 @@
 Vivado Simulator 2020.2
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /home/charles/Applications/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto fbfa33bf844143359da4f5e7109fc83c --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb -log elaborate.log 
+Running: /home/charles/Applications/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto fbfa33bf844143359da4f5e7109fc83c --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tbMain1_behav xil_defaultlib.tbMain1 -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -11,7 +11,27 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
 Compiling package unisim.vcomponents
+Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
+Compiling architecture behavioral of entity xil_defaultlib.synchro_module_v2 [\synchro_module_v2(const_clk_sys...]
+Compiling architecture behavioral of entity xil_defaultlib.septSegments_encodeur [septsegments_encodeur_default]
+Compiling architecture behavioral of entity xil_defaultlib.septSegments_refreshPmod [septsegments_refreshpmod_default]
+Compiling architecture behavioral of entity xil_defaultlib.septSegments_Top [septsegments_top_default]
+Compiling architecture behavioral of entity xil_defaultlib.full_adder [full_adder_default]
+Compiling architecture behavioral of entity xil_defaultlib.full_adder_4bit [full_adder_4bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.thermo2bin [thermo2bin_default]
 Compiling architecture behavioral of entity xil_defaultlib.Add1bitB [add1bitb_default]
-Compiling architecture behavioral of entity xil_defaultlib.top_tb
-Built simulation snapshot Top_tb_behav
+Compiling architecture behavioral of entity xil_defaultlib.Add1bitA [add1bita_default]
+Compiling architecture behavioral of entity xil_defaultlib.Add4bits [add4bits_default]
+Compiling architecture behavioral of entity xil_defaultlib.scaler2_3 [scaler2_3_default]
+Compiling architecture behavioral of entity xil_defaultlib.decoder3_8 [decoder3_8_default]
+Compiling architecture behavioral of entity xil_defaultlib.parity [parity_default]
+Compiling architecture behavioral of entity xil_defaultlib.bin2bcd_non_signed [bin2bcd_non_signed_default]
+Compiling architecture behavioral of entity xil_defaultlib.bin2bcd_signed [bin2bcd_signed_default]
+Compiling architecture behavioral of entity xil_defaultlib.bin2bcd [bin2bcd_default]
+Compiling architecture behavioral of entity xil_defaultlib.multiplexer [multiplexer_default]
+Compiling architecture behavioral of entity xil_defaultlib.main [main_default]
+Compiling architecture behavioral of entity xil_defaultlib.tbmain1
+Built simulation snapshot tbMain1_behav

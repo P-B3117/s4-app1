@@ -99,8 +99,10 @@ ARCHITECTURE BEHAVIORAL OF main IS
 
     COMPONENT scaler2_3 IS
         PORT (
-            ADCbin : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-            a2_3 : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
+           ADCbin : in STD_LOGIC_VECTOR (3 downto 0);
+           ADCbinI : in STD_LOGIC;
+           A2_3 : out STD_LOGIC_VECTOR (2 downto 0);
+           A2_3I : out STD_LOGIC
         );
     END COMPONENT;
 
@@ -181,6 +183,8 @@ BEGIN
     pmodled_scale : scaler2_3
     PORT MAP(
         ADCbin => ADCbin,
+        ADCbinI => '0',
+--        A2_3I => '0',
         a2_3 => a2_3
     );
 

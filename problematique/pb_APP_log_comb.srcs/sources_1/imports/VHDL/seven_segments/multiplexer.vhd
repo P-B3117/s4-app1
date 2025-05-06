@@ -48,7 +48,7 @@ BEGIN
                     DAFF0 <= code_s;
                     DAFF1 <= units_s;
 
-                WHEN "11" =>
+                WHEN OTHERS =>
                     DAFF0 <= "1110";
                     DAFF1 <= "1010";
 

@@ -70,8 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
 
@@ -86,12 +84,6 @@ set_property ip_output_repo /home/charles/Documents/git/uni-app/s4-app1/problema
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -vhdl2008 -library xil_defaultlib {
-  /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/src/septSegments_encodeur.vhd
-  /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/src/septSegments_refreshPmod.vhd
-  /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/src/septSegments_Top.vhd
-  /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/src/synchro_module_v2.vhd
-}
 read_vhdl -library xil_defaultlib {
   /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/VHDL/thermo2bin/thermo2bin.vhd
   /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/VHDL/seven_segments/septSegments_Top.vhd

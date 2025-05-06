@@ -11,7 +11,8 @@ ENTITY bin2bcd_signed IS
 END ENTITY bin2bcd_signed;
 
 ARCHITECTURE behavioral OF bin2bcd_signed IS
-    SIGNAL substract_value : STD_LOGIC_VECTOR(3 DOWNTO 0);
+    SIGNAL ADCbin_not : STD_LOGIC_VECTOR(3 DOWNTO 0);
+    SIGNAL ADCbin_two_complement : STD_LOGIC_VECTOR(3 DOWNTO 0);
 
     COMPONENT full_adder_4bit IS
         PORT (
@@ -24,17 +25,16 @@ ARCHITECTURE behavioral OF bin2bcd_signed IS
     END COMPONENT;
 
 BEGIN
-    substract_value <= "0110" WHEN ((ADCbin(3) AND ADCbin(1)) OR (ADCbin(3) AND ADCbin(2))) = '1' ELSE
-        "0000";
+    ADCbin_not <= NOT(ADCbin);
 
     substract10 : full_adder_4bit
     PORT MAP(
-        a => ADCbin,
-        b => substract_value,
-        cin => '0',
-        s => units_s
+        a => ADCbin_not,
+        b => "0000",
+        cin => '1',
+        s => ADCbin_two_complement
     );
 
-    code_s <= "1101" WHEN ((ADCbin(3) AND ADCbin(1)) OR (ADCbin(3) AND ADCbin(2))) = '1' ELSE
-        "0000";
+    units_s <= ADCbin_two_complement WHEN ADCbin(3) = '1' ELSE ADCbin;
+    code_s <= "1101" WHEN ADCbin(3) = '1' ELSE "0000";
 END ARCHITECTURE behavioral;

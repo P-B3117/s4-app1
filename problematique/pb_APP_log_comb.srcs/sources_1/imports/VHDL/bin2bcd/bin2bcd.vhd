@@ -15,6 +15,7 @@ END ENTITY bin2bcd;
 
 ARCHITECTURE behavioral OF bin2bcd IS
     SIGNAL ADCsubstracted : STD_LOGIC_VECTOR(3 DOWNTO 0);
+    SIGNAL coutish : STD_LOGIC;
 
     COMPONENT bin2bcd_non_signed IS
         PORT (
@@ -34,7 +35,7 @@ ARCHITECTURE behavioral OF bin2bcd IS
         );
     END COMPONENT;
 
-    COMPONENT full_4bit_adder IS
+    COMPONENT full_adder_4bit IS
         PORT (
             a : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
             b : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -52,12 +53,13 @@ BEGIN
         units_ns => units_ns
     );
 
-    substract5 : full_4bit_adder
+    substract5 : full_adder_4bit
     PORT MAP(
         a => ADCbin,
         b => "1011",
         cin => '0',
-        s => ADCsubstracted
+        s => ADCsubstracted,
+        cout => coutish
     );
 
     signed : bin2bcd_signed

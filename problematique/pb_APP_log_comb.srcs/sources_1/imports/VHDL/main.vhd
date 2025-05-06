@@ -194,7 +194,6 @@ BEGIN
     PORT MAP(
         packet => ADCbin,
         switch => i_S1,
---        parity => o_led(0)
         parity => o_led6_r
     );
     
@@ -217,8 +216,8 @@ BEGIN
     error => error,
     BTN => i_btn(1 downto 0),
     S2 => i_s2,
-    DAFF0 => d_AFF0,
-    DAFF1 => d_AFF1
+    DAFF0 => d_AFF1,
+    DAFF1 => d_AFF0
     );
     
     
@@ -227,9 +226,9 @@ BEGIN
     d_opb <= i_btn; -- operande B sur boutons
     d_cin <= '0'; -- la retenue d'entr�e alterne 0 1 a 1 Hz
 
-    d_AFF0 <= d_sum(3 DOWNTO 0); -- Le resultat de votre additionneur affich� sur PmodSSD(0)
-    d_AFF1 <= '0' & '0' & '0' & d_Cout; -- La retenue de sortie affich�e sur PmodSSD(1) (0 ou 1)
-    o_led6_r <= d_Cout; -- La led couleur repr�sente aussi la retenue en sortie  Cout
-    o_pmodled <= d_opa & d_opb; -- Les op�randes d'entr�s reproduits combin�s sur Pmod8LD
+    --d_AFF0 <= d_sum(3 DOWNTO 0); -- Le resultat de votre additionneur affich� sur PmodSSD(0)
+    --d_AFF1 <= '0' & '0' & '0' & d_Cout; -- La retenue de sortie affich�e sur PmodSSD(1) (0 ou 1)
+    --o_led6_r <= d_Cout; -- La led couleur repr�sente aussi la retenue en sortie  Cout
+    --o_pmodled <= d_opa & d_opb; -- Les op�randes d'entr�s reproduits combin�s sur Pmod8LD
     o_led (3 DOWNTO 0) <= '0' & '0' & '0' & d_S_1Hz; -- La LED0 sur la carte repr�sente la retenue d'entr�e        
 END BEHAVIORAL;

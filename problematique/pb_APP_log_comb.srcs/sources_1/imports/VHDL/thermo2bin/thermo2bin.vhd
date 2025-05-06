@@ -161,7 +161,7 @@ BEGIN
         OR (thermo(6) AND NOT thermo(5))
         OR (thermo(7) AND NOT thermo(6))
         OR (thermo(8) AND NOT thermo(7))
-        OR (thermo(8) AND NOT thermo(8))
+        OR (thermo(9) AND NOT thermo(8))
         OR (thermo(10) AND NOT thermo(9))
         OR (thermo(11) AND NOT thermo(10));
 END Behavioral;

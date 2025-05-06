@@ -110,7 +110,6 @@ read_vhdl -library xil_defaultlib {
   /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/VHDL/seven_segments/septSegments_encodeur.vhd
   /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/new/Add1bitB.vhd
   /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/new/Add4bits.vhd
-  /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/new/Fct2_3.vhd
   /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/new/lab1.vhd
 }
 OPTRACE "Adding files" END { }

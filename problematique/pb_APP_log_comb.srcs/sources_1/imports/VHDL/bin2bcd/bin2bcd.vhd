@@ -35,11 +35,10 @@ ARCHITECTURE behavioral OF bin2bcd IS
         );
     END COMPONENT;
 
-    COMPONENT full_adder_4bit IS
+    COMPONENT adder_4bit IS
         PORT (
             a : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
             b : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-            cin : IN STD_LOGIC;
             s : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
             cout : OUT STD_LOGIC
         );
@@ -53,11 +52,10 @@ BEGIN
         units_ns => units_ns
     );
 
-    substract5 : full_adder_4bit
+    substract5 : adder_4bit
     PORT MAP(
         a => ADCbin,
         b => "1011",
-        cin => '0',
         s => ADCsubstracted,
         cout => coutish
     );

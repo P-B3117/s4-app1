@@ -13,7 +13,7 @@ END ENTITY bin2bcd_non_signed;
 ARCHITECTURE behavioral OF bin2bcd_non_signed IS
     SIGNAL substract_value : STD_LOGIC_VECTOR(3 DOWNTO 0);
 
-    COMPONENT full_adder_4bit IS
+    COMPONENT adder_4bit IS
         PORT (
             a : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
             b : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -28,11 +28,10 @@ BEGIN
     substract_value <= "0110" WHEN ((ADCbin(3) AND ADCbin(1)) OR (ADCbin(3) AND ADCbin(2))) = '1' ELSE
         "0000";
 
-    substract10 : full_adder_4bit
+    substract10 : adder_4bit
     PORT MAP(
         a => ADCbin,
         b => substract_value,
-        cin => '0',
         s => units_ns
     );
 

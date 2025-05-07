@@ -1,22 +1,21 @@
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 
-ENTITY full_adder_4bit IS
+ENTITY adder_4bit IS
     PORT (
         a : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
         b : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-        cin : IN STD_LOGIC;
         s : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
         cout : OUT STD_LOGIC
     );
-END full_adder_4bit;
+END adder_4bit;
 
-ARCHITECTURE Behavioral OF full_adder_4bit IS
+ARCHITECTURE Behavioral OF adder_4bit IS
     SIGNAL cint : STD_LOGIC_VECTOR(2 DOWNTO 0);
 
 BEGIN
-    s(0) <= a(0) XOR b(0) XOR cin;
-    cint(0) <= (a(0) AND b(0)) OR (cin AND a(0)) OR (cin AND b(0));
+    s(0) <= a(0) XOR b(0);
+    cint(0) <= (a(0) AND b(0));
 
     s(1) <= a(1) XOR b(1) XOR cint(0);
     cint(1) <= (a(1) AND b(1)) OR (cint(0) AND a(1)) OR (cint(0) AND b(1));

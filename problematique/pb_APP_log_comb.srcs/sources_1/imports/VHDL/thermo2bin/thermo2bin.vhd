@@ -25,11 +25,10 @@ ARCHITECTURE Behavioral OF thermo2bin IS
         );
     END COMPONENT;
 
-    COMPONENT full_adder_4bit IS
+    COMPONENT adder_4bit IS
         PORT (
             a : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
             b : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-            cin : IN STD_LOGIC;
             s : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
             cout : OUT STD_LOGIC
         );
@@ -60,28 +59,25 @@ BEGIN
         bin => s3,
     );
 
-    first_adder : full_adder_4bit
+    first_adder : adder_4bit
     PORT MAP(
         a => s0,
         b => s1,
-        cin => '0',
         s => b0
     );
 
-    second_adder : full_adder_4bit
+    second_adder : adder_4bit
     PORT MAP(
         a => s2,
         b => s3,
-        cin => '0',
         s => b1
     );
 
     -- BIN
-    bin_adder : full_adder_4bit
+    bin_adder : adder_4bit
     PORT MAP(
         a => b0,
         b => b1,
-        cin => '0',
         s => bin
     );
 

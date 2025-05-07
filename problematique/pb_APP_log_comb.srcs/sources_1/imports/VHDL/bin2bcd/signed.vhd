@@ -14,11 +14,10 @@ ARCHITECTURE behavioral OF bin2bcd_signed IS
     SIGNAL ADCbin_not : STD_LOGIC_VECTOR(3 DOWNTO 0);
     SIGNAL ADCbin_two_complement : STD_LOGIC_VECTOR(3 DOWNTO 0);
 
-    COMPONENT full_adder_4bit IS
+    COMPONENT adder_4bit IS
         PORT (
             a : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
             b : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-            cin : IN STD_LOGIC;
             s : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
             cout : OUT STD_LOGIC
         );
@@ -27,11 +26,10 @@ ARCHITECTURE behavioral OF bin2bcd_signed IS
 BEGIN
     ADCbin_not <= NOT(ADCbin);
 
-    substract10 : full_adder_4bit
+    substract10 : adder_4bit
     PORT MAP(
         a => ADCbin_not,
-        b => "0000",
-        cin => '1',
+        b => "0001",
         s => ADCbin_two_complement
     );
 

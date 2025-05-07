@@ -4,7 +4,7 @@ Nov 18 2020
 09:20:35
 /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sim_1/imports/Downloads/testbenchThermo1.vhd,1746507771,vhdl,,,,tbthermoa,,,,,,,,
 /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sim_1/new/TbScalerA.vhd,1746504886,vhdl,,,,tbtscaler2_3,,,,,,,,
-/home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sim_1/new/tbMain1.vhd,1746574331,vhdl,,,,tbmain1,,,,,,,,
+/home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sim_1/new/tbMain1.vhd,1746575029,vhdl,,,,tbmain1,,,,,,,,
 /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sim_1/new/testbenchThermo2.vhd,1746508036,vhdl,,,,tbthermob,,,,,,,,
 /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/VHDL/bin2bcd/bin2bcd.vhd,1746496371,vhdl,,,,bin2bcd,,,,,,,,
 /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/VHDL/bin2bcd/non_signed.vhd,1746383768,vhdl,,,,bin2bcd_non_signed,,,,,,,,
@@ -17,7 +17,7 @@ Nov 18 2020
 /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/VHDL/seven_segments/septSegments_Top.vhd,1746383768,vhdl,,,,septsegments_top,,,,,,,,
 /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/VHDL/seven_segments/septSegments_encodeur.vhd,1746383768,vhdl,,,,septsegments_encodeur,,,,,,,,
 /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/VHDL/seven_segments/septSegments_refreshPmod.vhd,1746383768,vhdl,,,,septsegments_refreshpmod,,,,,,,,
-/home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/VHDL/thermo2bin/thermo2bin.vhd,1746498640,vhdl,,,,thermo2bin,,,,,,,,
+/home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/VHDL/thermo2bin/thermo2bin.vhd,1746574644,vhdl,,,,thermo2bin,,,,,,,,
 /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/VHDL/utils/full_adder.vhd,1746383768,vhdl,,,,full_adder,,,,,,,,
 /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/VHDL/utils/full_adder_4bit.vhd,1746383768,vhdl,,,,full_adder_4bit,,,,,,,,
 /home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/VHDL/utils/synchro_module_v2.vhd,1746383768,vhdl,,,,synchro_module_v2,,,,,,,,

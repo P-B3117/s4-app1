@@ -3,6 +3,10 @@ Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
 Running: /home/charles/Applications/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto fbfa33bf844143359da4f5e7109fc83c --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tbMain1_behav xil_defaultlib.tbMain1 -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-4940] 'thermo2bin_mini' remains a black box since it has no binding entity [/home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/VHDL/thermo2bin/thermo2bin.vhd:39]
+WARNING: [VRFC 10-4940] 'thermo2bin_mini' remains a black box since it has no binding entity [/home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/VHDL/thermo2bin/thermo2bin.vhd:45]
+WARNING: [VRFC 10-4940] 'thermo2bin_mini' remains a black box since it has no binding entity [/home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/VHDL/thermo2bin/thermo2bin.vhd:51]
+WARNING: [VRFC 10-4940] 'thermo2bin_mini' remains a black box since it has no binding entity [/home/charles/Documents/git/uni-app/s4-app1/problematique/pb_APP_log_comb.srcs/sources_1/imports/VHDL/thermo2bin/thermo2bin.vhd:57]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -19,7 +23,6 @@ Compiling architecture behavioral of entity xil_defaultlib.synchro_module_v2 [\s
 Compiling architecture behavioral of entity xil_defaultlib.septSegments_encodeur [septsegments_encodeur_default]
 Compiling architecture behavioral of entity xil_defaultlib.septSegments_refreshPmod [septsegments_refreshpmod_default]
 Compiling architecture behavioral of entity xil_defaultlib.septSegments_Top [septsegments_top_default]
-Compiling architecture behavioral of entity xil_defaultlib.full_adder [full_adder_default]
 Compiling architecture behavioral of entity xil_defaultlib.full_adder_4bit [full_adder_4bit_default]
 Compiling architecture behavioral of entity xil_defaultlib.thermo2bin [thermo2bin_default]
 Compiling architecture behavioral of entity xil_defaultlib.Add1bitB [add1bitb_default]

@@ -39,25 +39,25 @@ BEGIN
     mini0 : thermo2bin_mini
     PORT MAP(
         thermo => thermo(2 DOWNTO 0),
-        bin => s0,
+        bin => s0
     );
 
     mini1 : thermo2bin_mini
     PORT MAP(
         thermo => thermo(5 DOWNTO 3),
-        bin => s1,
+        bin => s1
     );
 
     mini2 : thermo2bin_mini
     PORT MAP(
         thermo => thermo(8 DOWNTO 6),
-        bin => s2,
+        bin => s2
     );
 
     mini3 : thermo2bin_mini
     PORT MAP(
         thermo => thermo(11 DOWNTO 9),
-        bin => s3,
+        bin => s3
     );
 
     first_adder : full_adder_4bit
